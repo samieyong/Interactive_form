@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+
+      <link rel="stylesheet" href="css/style.css" media="all" />
+      <link rel="stylesheet" media="print" href="css/print.css" />
+      <title>Frontend Mentor | Interactive form</title>
+   </head>
+   <body>
+      <main class="container">
+         <section class="card print">
+            <div class="card-back">
+               <img src="images/bg-card-back.png" alt="" />
+               <p class="output-cvc">000</p>
+            </div>
+            <div class="card-front">
+               <img
+                  src="images/bg-card-front.png"
+                  alt=""
+                  class="card-front-img"
+               />
+               <div class="card-front-content">
+                  <img src="images/card-logo.svg" alt="" />
+                  <p class="output-card-number">0000 0000 0000 0000</p>
+                  <div class="output-name-date">
+                     <p class="output-name">Name</p>
+                     <p class="output-date">00/00</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="card-details">
+            <form>
+               <div class="name">
+                  <label for="name">cardholder name</label>
+                  <input
+                     type="text"
+                     id="name"
+                     maxlength="25"
+                     placeholder="e.g Jane Appleseed"
+                     autocomplete="off"
+                  />
+                  <p class="error-message">This field is required</p>
+               </div>
+
+               <div class="card-number">
+                  <label for="card-number">card number</label>
+                  <input
+                     type="text"
+                     id="card-number"
+                     maxlength="19"
+                     placeholder="e.g. 1234 5678 9123 0000"
+                  />
+                  <p class="error-message">This field is required</p>
+               </div>
+
+               <div class="date-cvc">
+                  <div class="exp-date">
+                     <label for="month">Exp. date (mm/yy)</label>
+                     <input
+                        type="text"
+                        id="month"
+                        maxlength="2"
+                        placeholder="MM"
+                     />
+                     <input
+                        type="text"
+                        id="year"
+                        maxlength="2"
+                        placeholder="YY"
+                     />
+                     <p class="error-message">This field is required</p>
+                  </div>
+                  <div class="cvc">
+                     <label for="cvc">cvc</label>
+                     <input
+                        type="text"
+                        id="cvc"
+                        maxlength="3"
+                        placeholder="e.g. 123"
+                     />
+                     <p class="error-message">This field is required</p>
+                  </div>
+               </div>
+
+               <button class="submit-btn">Confirm</button>
+            </form>
+
+            <div class="completed">
+               <img src="images/icon-complete.svg" alt="" />
+               <h1>thank you!</h1>
+               <p>We've added your card details</p>
+               <button class="continue-btn">Continue</button>
+               <p>
+                  Click here 👉
+                  <a onclick="window.print();">PRINT CARD</a>
+                  to print the card
+               </p>
+            </div>
+         </section>
+      </main>
+      <footer class="print">
+         <div class="attribution">
+            Challenge by
+            <a
+               href="https://www.frontendmentor.io?ref=challenge"
+               target="_blank"
+               >Frontend Mentor</a
+            >. Coded by <a href="#">Samieyong</a>.
+         </div>
+      </footer>
+   </body>
+   <script src="javascript/script.js"></script>
+</html>

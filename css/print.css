@@ -1,0 +1,19 @@
+body * {
+   visibility: hidden;
+}
+.print,
+.print * {
+   visibility: visible;
+}
+.card-front {
+   top: 70px;
+   left: 20%;
+}
+.card-back {
+   top: 350px;
+   left: 20%;
+}
+.output-cvc {
+   right: 150px;
+   color: black;
+}
