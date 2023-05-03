@@ -22,7 +22,7 @@ clientName.addEventListener('input', () => {
 });
 cardNumber.addEventListener('input', () => {
    let value = cardNumber.value.replace(/\D/g, ''); //Ensures only numbers are entered
-   value = value.replace(/([0-9]{4})/g, '$1 ').trim();
+   value = value.replace(/([0-9]{4})/g, '$1 ').trim(); //arrange the numbers in group of 4
    cardNumber.value = value;
    outputCardNumber.textContent = value;
 });
@@ -52,7 +52,7 @@ function success(input) {
 
 //validate name
 function checkName(input) {
-   let regEx = /^[^0-9]*$/;
+   let regEx = /^[^0-9]*$/; //to validate only string is entered
    if (input.value === '') {
       error(input, 'this field is required');
    } else if (regEx.test(input.value)) {
@@ -97,6 +97,11 @@ function checkYear(month, year) {
       regEx.test(year.value) &&
       Number(year.value) + 2000 >= date.getFullYear() &&
       month.value > Number(date.getMonth()) + 1
+   ) {
+      return;
+   } else if (
+      regEx.test(year.value) &&
+      Number(year.value) + 2000 > date.getFullYear()
    ) {
       return;
    } else {
